@@ -19,10 +19,16 @@ st.markdown(
 with open ('style.css') as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
+secao_usuario = st.session_state
+nome_usuario = None
+if "username" in secao_usuario:
+    nome_usuario = secao_usuario.name
+    
 coluna_esquerda, coluna_direita = st.columns([1, 1.5])
 
 coluna_esquerda.title("Cotralti Corp.")
-coluna_esquerda.write("#### Bem vindo, Fulano") # markdown
+if nome_usuario:
+    coluna_esquerda.write(f"#### Bem vindo, {nome_usuario}") # markdown
 botao_dashboards = coluna_esquerda.button("Calculadora de Frete Tonelada")
 botao_indicadores = coluna_esquerda.button("Calculadora de Frete Dedicado")
 
