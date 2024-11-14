@@ -42,7 +42,7 @@ if botao_indicadores:
 
 
 container = coluna_direita.container(border=True)
-container.image("cotraltiimage.jpg ")
+container.image("cotraltiimage.jpg")
 st.write("""
          &copy; 2024 - Luis Felipe A. David. Todos os direitos reservados
          """)
