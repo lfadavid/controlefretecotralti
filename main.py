@@ -51,7 +51,7 @@ if dados_usuario:
                                 st.Page("consultarotas.py", title="③ Consulta por Rotas"),
                                 st.Page("rateiofrete.py", title="④ Rateio de Frete por peso")],
                     "𝐔𝐭𝐢𝐥𝐢𝐭𝐚́𝐫𝐢𝐨𝐬":[st.Page("separadorpdf.py", title="📝Separador Arquivos PDF"),
-                                 st.Page("juntarpdf.py.py", title="📝Juntar Arquivos PDF")],
+                                 st.Page("juntarpdf.py", title="📝Juntar Arquivos PDF")],
                     "𝗖𝗼𝗻𝘁𝗮": [st.Page(logout, title="⊗ Sair"), st.Page("criar_conta.py", title="＋ Criar Conta")]
                     }
         )
