@@ -67,9 +67,10 @@ DataFrame["Estado de Destino"]  = DataFrame["Estado de Destino"]
 with open ('style.css') as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
-st.sidebar.header("Filtro")
+#Inserindo as colunas na tela
+coluna_esquerda  , coluna_direita = st.columns([1, 1])
 
-cidade = st.sidebar.selectbox(
+cidade = coluna_esquerda.selectbox(
                 key=1,
                 label="Cidade",
                 options=DataFrame["Cidade"].unique(),
@@ -79,7 +80,7 @@ cidade = st.sidebar.selectbox(
                 
 )
 
-tabela_de_fat = st.sidebar.multiselect(
+tabela_de_fat = coluna_direita.multiselect(
                 key=2,
                 label="Tabela de Fat.",
                 options=DataFrame["Tabela de Fat."].unique(),

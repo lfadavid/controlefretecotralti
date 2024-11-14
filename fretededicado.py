@@ -87,7 +87,8 @@ if peso_digitado is not None and origem_local is not None and tipo_carga is not 
     fretepeso  = valor_frete
     prazoentrega = df_filtro_carga['Prazo_Entrega'].values[0]
     cliente = df_filtro_carga['Cliente'].values[0]
-    destinoregioes = df_filtro_carga['Destino_Regiões'].values[0]
+    destinoregioes = df_filtro_regioes['Destino_Regiões'].values[0]
+    estadodestino = df_filtro_regioes['UF'].values[0]
     origemlocal = df_filtro_carga['Origem_Local'].values[0]
     tipo = df_filtro_carga['Tipo'].values[0]
     valorfretekg = fretepeso /1000
@@ -106,15 +107,13 @@ if peso_digitado is not None and origem_local is not None and tipo_carga is not 
       st.divider()
         
       st.write(f"❶ O **Origem** é a **{origem_local}**.")
-      st.write(f"❷ O **Região** de Destino é   **{destinoregioes}** .")
+      st.write(f"❷ O **Região** de Destino é   **{destinoregioes}**  e o Estado é **{estadodestino}**.")
       st.write(f"❸ O **Cliente** de destino é **{cliente}**.")
       st.write(f"❹ Para calcular o **FRETE TOTAL** é necessário somar: ( **Frete + Taxa NF + ADValorem + Icms )**.")
       st.write(f"❺ O **ICMS** de transporte (_é o imposto que incide sobre o serviço de transporte de cargas, seja ele rodoviário, ferroviário, aéreo ou aquaviário_)  **RJ x RJ = 22%** , **RJ x _( SP, MG, PR, SC e RS )_ = 12%** .")
       st.write(f"❻ O Tipo da Carga é **{tipo}**.")
       st.divider()
-      st.write("""
-         &copy; 2024 - Luis Felipe A. David. Todos os direitos reservados
-         """) 
+
 else:
     st.button("Cᥲᥣᥴᥙᥣᥲr Frᥱtᥱ",disabled=True)
     

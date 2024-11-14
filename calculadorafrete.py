@@ -114,7 +114,4 @@ if peso_digitado is not None and rota_digitada is not None:
          """) 
 else:
     st.button("Calcular Frete",disabled=True)
-    
-    st.write("""
-         &copy; 2024 - Luis Felipe A. David. Todos os direitos reservados
-         """)
+ 

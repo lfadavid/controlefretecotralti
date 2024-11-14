@@ -5,9 +5,9 @@ from models import session , Usuario
   
 st.set_page_config(
     page_title="Cotralti Transportes e Logistica",
-    page_icon="🧊",
+    page_icon="cotralti_logo.png",
     layout="wide",
-    #initial_sidebar_state="expanded"
+    initial_sidebar_state="expanded"
 )
 
 lista_usuarios = session.query(Usuario).all() # traz todas as informações do banco de dados
@@ -45,25 +45,25 @@ if dados_usuario:
         
                     {
                         
-                    "Home":[st.Page("homepage.py", title="Cotralti Corporation")],
-                    "Consultas na Tabela Spice ": [st.Page("calculadorafrete.py", title="Calculadora de Frete Tonelada"),
-                                st.Page("fretededicado.py", title="Cálculo de Frete Dedicado"),
-                                st.Page("consultarotas.py", title="Consulta por Rotas"),
-                                st.Page("rateiofrete.py", title="Rateio de Frete por peso")],
-                    "Conta": [st.Page(logout, title="Sair"), st.Page("criar_conta.py", title="Criar Conta")]
+                    "𝗛𝗼𝗺𝗲":[st.Page("homepage.py", title="★ Cotralti Corporation")],
+                    "𝗖𝗼𝗻𝘀𝘂𝗹𝘁𝗮𝘀 𝗻𝗮 𝗧𝗮𝗯𝗲𝗹𝗮 𝗦𝗽𝗶𝗰𝗲": [st.Page("calculadorafrete.py", title="① Calculadora de Frete Tonelada"),
+                                st.Page("fretededicado.py", title="② Cálculo de Frete Dedicado"),
+                                st.Page("consultarotas.py", title="③ Consulta por Rotas"),
+                                st.Page("rateiofrete.py", title="④ Rateio de Frete por peso")],
+                    "𝗖𝗼𝗻𝘁𝗮": [st.Page(logout, title="⊗ Sair"), st.Page("criar_conta.py", title="＋ Criar Conta")]
                     }
         )
     else:
         pg = st.navigation(
         
-                    {
+                  {
                         
-                    "Home":[st.Page("homepage.py", title="Cotralti Corporation")],
-                    "Consultas na Tabela Spice ": [st.Page("calculadorafrete.py", title="Calculadora de Frete Tonelada"),
-                                st.Page("fretededicado.py", title="Cálculo de Frete Dedicado"),
-                                st.Page("consultarotas.py", title="Consulta por Rotas"),
-                                st.Page("rateiofrete.py", title="Rateio de Frete por peso")],
-                    "Conta": [st.Page(logout, title="Sair")]
+                    "𝗛𝗼𝗺𝗲":[st.Page("homepage.py", title="★ Cotralti Corporation")],
+                    "𝗖𝗼𝗻𝘀𝘂𝗹𝘁𝗮𝘀 𝗻𝗮 𝗧𝗮𝗯𝗲𝗹𝗮 𝗦𝗽𝗶𝗰𝗲": [st.Page("calculadorafrete.py", title="① Calculadora de Frete Tonelada"),
+                                st.Page("fretededicado.py", title="② Cálculo de Frete Dedicado"),
+                                st.Page("consultarotas.py", title="③ Consulta por Rotas"),
+                                st.Page("rateiofrete.py", title="④ Rateio de Frete por peso")],
+                    "𝗖𝗼𝗻𝘁𝗮": [st.Page(logout, title="⊗ Sair")]
                     }
         )
         

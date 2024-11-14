@@ -1,18 +1,6 @@
 import streamlit as st
 
-with st.sidebar: # todos os campos que estão aqui indentado dentro do with esta dentro do Sidebar
-        st.title("Calculadora de Rateio")
-      
-        st.header("Rateio de Peso: Definição ?")
-        st.divider()
-        st.write("É um **cálculo** que considera o peso de cada item em relação ao peso total de um carrinho de compras ou de uma carga.")
-        st.divider()
-        st.write(":red[Para evitar erro ,o sistema inicia já com o Nº 1 definido.]")
-        st.divider()
-        st.write("""&copy; 2024 - Luis Felipe A. David.""")
-        st.write("""Todos os direitos reservados""")
-
-st.header("Rateio de  :blue[frete] por :green[peso]! ", divider='gray')
+st.header("Rateio de  :blue[Frete] por :green[Peso]! ", divider='gray')
 # Função para calcular o valor proporcional do frete por peso
 def calcular_rateio(pesos, valor_total_frete, peso_total):
     return [(peso / peso_total) * valor_total_frete for peso in pesos]
