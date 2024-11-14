@@ -26,7 +26,7 @@ if "username" in secao_usuario:
     
 coluna_esquerda, coluna_direita = st.columns([1, 1.5])
 
-coluna_esquerda.header("Cotralti :blue[Corp.] ", divider='green')
+coluna_esquerda.header("Cotralti :blue[Transp&Log.] ", divider='green')
 if nome_usuario:
     coluna_esquerda.write(f"#### Bem vindo, **{nome_usuario}**") # markdown
     
