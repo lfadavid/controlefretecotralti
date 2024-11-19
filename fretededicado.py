@@ -86,12 +86,12 @@ if peso_digitado is not None and origem_local is not None and tipo_carga is not 
     valor_frete = calcular_frete(origem_local , peso_digitado)
     fretepeso  = valor_frete
     prazoentrega = df_filtro_carga['Prazo_Entrega'].values[0]
-    cliente = df_filtro_carga['Cliente'].values[0]
+    cliente = df_filtro_regioes['Cliente'].values[0]
     destinoregioes = df_filtro_regioes['Destino_Regiões'].values[0]
     estadodestino = df_filtro_regioes['UF'].values[0]
     origemlocal = df_filtro_carga['Origem_Local'].values[0]
     tipo = df_filtro_carga['Tipo'].values[0]
-    valorfretekg = fretepeso /1000
+    valorfretekg = fretepeso / peso_digitado
     st.divider()
     
     if fretepeso == 0:
