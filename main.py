@@ -19,7 +19,7 @@ credenciais = {"usernames": {
 authenticator = stauth.Authenticate(credenciais, "credenciais_hashco", "fsyfus%$67fs76AH7", cookie_expiry_days=30)
 
 def autenticar_usuario(authenticator):
-    nome, status_autenticacao, username = authenticator.login()
+    nome, status_autenticacao, username = authenticator.login(fields={"nome": nome, "username": username})
 
     if status_autenticacao:
         return {"nome": nome, "username": username}
