@@ -91,7 +91,7 @@ if peso_digitado is not None and origem_local is not None and tipo_carga is not 
     estadodestino = df_filtro_regioes['UF'].values[0]
     origemlocal = df_filtro_carga['Origem_Local'].values[0]
     tipo = df_filtro_carga['Tipo'].values[0]
-    valorfretekg = fretepeso / peso_digitado
+    valorfretekg = fretepeso /peso_digitado
     st.divider()
     
     if fretepeso == 0:
@@ -101,8 +101,8 @@ if peso_digitado is not None and origem_local is not None and tipo_carga is not 
       coluna_esquerda , coluna_meio , coluna_direita = st.columns([1, 1,1])  
                   
       coluna_meio.metric(f"**O Prazo de entrega é** ",f'{prazoentrega}')
-      coluna_esquerda.metric("𝗢 𝘃𝗮𝗹𝗼𝗿 𝗱𝗼 𝗙𝗿𝗲𝘁𝗲 𝗲́",f'R$ {fretepeso:,.2f} reais')
-      coluna_direita.metric("𝗢 𝘃𝗮𝗹𝗼𝗿 𝗱𝗼 **KG** do produto é",f'R$ {valorfretekg:,.2f} reais')
+      coluna_esquerda.metric("𝗢 𝘃𝗮𝗹𝗼𝗿 𝗱𝗼 𝗙𝗿𝗲𝘁𝗲 𝗲́",f'R$ {fretepeso:_.2f} reais'.replace('.',',').replace('_','.'))
+      coluna_direita.metric("𝗢 𝘃𝗮𝗹𝗼𝗿 𝗱𝗼 **KG** do produto é",f'R$ {valorfretekg:_.2f} reais'.replace('.',',').replace('_','.'))
       
       st.divider()
         

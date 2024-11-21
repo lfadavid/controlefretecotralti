@@ -26,9 +26,9 @@ if "username" in secao_usuario:
     
 coluna_esquerda, coluna_direita = st.columns([1, 1.5])
 
-coluna_esquerda.header("Cotralti :blue[Transp&Log.] ", divider='green')
+coluna_esquerda.header("Cotralti :blue[T] & :gray[L] ", divider='green')
 if nome_usuario:
-    coluna_esquerda.write(f"#### Bem vindo, **{nome_usuario}**") # markdown
+    coluna_esquerda.write(f"#### Olá, **:red[{nome_usuario}]**") # markdown
     
 st.markdown("𝑨𝒄𝒆𝒔𝒔𝒆 𝒏𝒐𝒔𝒔𝒐 𝒔𝒊𝒕𝒆 𝒑𝒂𝒓𝒂 𝒄𝒐𝒏𝒉𝒆𝒄𝒆𝒓 𝒏𝒐𝒔𝒔𝒐𝒔 𝒔𝒆𝒓𝒗𝒊𝒄̧𝒐𝒔 :red[http://cotralti.com.br]")
 botao_dashboards = coluna_esquerda.button("Calculadora de Frete Tonelada")

@@ -14,7 +14,7 @@ class Usuario(Base):
     nome =Column("nome", String)
     senha = Column("senha", String)
     email = Column("email", String)
-    admin=Column("admin", Boolean)
+    admin= Column("admin", Boolean)
 
     def __init__(self, nome, senha, email, admin=False):
         self.nome = nome

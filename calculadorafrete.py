@@ -97,15 +97,15 @@ if peso_digitado is not None and rota_digitada is not None:
         coluna_esquerda , coluna_meio , coluna_direita = st.columns([1, 1,1])  
                 
         coluna_meio.metric(f"**A Tabela escolhida é** ",f'{rota_digitada}')
-        coluna_esquerda.metric("𝗢 𝘃𝗮𝗹𝗼𝗿 𝗱𝗼 𝗙𝗿𝗲𝘁𝗲 𝗥𝗼𝘁𝗮 𝗲́",f'R$ {fretepeso:,.2f} reais')
-        coluna_direita.metric("𝗢 𝘃𝗮𝗹𝗼𝗿 𝗱𝗼 **KG** do produto é",f'R$ {valorfretekg:,.2f} reais')
+        coluna_esquerda.metric("𝗢 𝘃𝗮𝗹𝗼𝗿 𝗱𝗼 𝗙𝗿𝗲𝘁𝗲 𝗥𝗼𝘁𝗮 𝗲́",f'R$ {fretepeso:_.2f} reais'.replace('.',',').replace('_','.'))
+        coluna_direita.metric("𝗢 𝘃𝗮𝗹𝗼𝗿 𝗱𝗼 **KG** do produto é",f'R$ {valorfretekg:_.2f} reais'.replace('.',',').replace('_','.'))
        
         st.divider()
         
         st.write("❶ Para calcular o **FRETE TOTAL** é necessário somar: ( **Frete Rota + Taxa NF + ADValorem + Icms )**.")
         st.write(f"❷ O Destino é as  **{regiao}** .")
         st.write(f"❸ O valor da Taxa de emissão do CTE é de **R$ {taxanf:.2f} reais**.")
-        st.write(f"❹ O **AD VALOREM** (_é uma taxa cobrada pelo transportador para proteger a carga contra danos durante a movimentação_) o valor é de **0,05%**.")
+        st.write(f"❹ O **AD VALOREM** (_é uma taxa cobrada pelo transportador para proteger a carga contra danos durante a movimentação_) o valor é de  **{adv:,.2f}%**.")
         st.write(f"❺ O **ICMS** de transporte (_é o imposto que incide sobre o serviço de transporte de cargas, seja ele rodoviário, ferroviário, aéreo ou aquaviário_)  **RJ x RJ = 22%** , **RJ x _( SP, MG, PR, SC e RS )_ = 12%** .")
         st.write(f"❻ O Tipo da Carga é **{tipo}**.")
         st.divider()
